@@ -2,9 +2,9 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
-var message = fs.readFileSync(~/bitstarter/index.html);
+var message = fs.readFileSync('/home/ubuntu/bitstarter/index.html');
 app.get('/', function(request, response) {
-  response.send(buf.toString(message));
+  response.send(message.toString());
 });
 
 var port = process.env.PORT || 5000;
