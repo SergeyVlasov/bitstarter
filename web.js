@@ -2,8 +2,9 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
+var message = fs.readFileSync(~/bitstarter/index.html);
 app.get('/', function(request, response) {
-  response.send('Hello World 2!');
+  response.send(buf.toString(message));
 });
 
 var port = process.env.PORT || 5000;
